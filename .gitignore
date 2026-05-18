@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+app/node_modules/
+
+# Environment
+.env
+.env.local
+
+# Test artifacts & reports
+reports/
+playwright-report/
+test-results/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE (personal)
+.cursor/

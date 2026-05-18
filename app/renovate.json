@@ -1,0 +1,33 @@
+{
+  "configMigration": true,
+  "extends": [
+    "config:recommended"
+  ],
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "prConcurrentLimit": 3,
+  "prHourlyLimit": 2,
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "separateMinorPatch": true,
+  "separateMultipleMajor": true,
+  "labels": [
+    "type: dependencies",
+    "renovate"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["/eslint/", "globals"],
+      "groupName": "eslint"
+    },
+    {
+      "matchDatasources": ["docker"],
+      "groupName": "cypress-docker-images",
+      "matchPackageNames": ["cypress/base", "cypress/browsers"],
+      "allowedVersions": "<25"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "todo-assignment",
+  "version": "1.0.0",
+  "description": "Kitchen Sink ToDo app — Gherkin test plan + Playwright automation with Allure",
+  "private": true,
+  "scripts": {
+    "start:app": "npm start --prefix app",
+    "test": "playwright test",
+    "test:e2e": "playwright test --project=e2e",
+    "test:e2e:headed": "playwright test --project=e2e --headed",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:report": "playwright show-report reports/html",
+    "allure:generate": "allure generate reports/allure-results -o reports/allure-report --clean",
+    "allure:open": "npm run allure:generate && allure open reports/allure-report",
+    "test:allure": "playwright test && npm run allure:generate"
+  },
+  "keywords": ["qa", "playwright", "allure", "todo"],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.8.0",
+    "allure-commandline": "^2.34.0",
+    "allure-js-commons": "^3.2.2",
+    "allure-playwright": "^3.2.2",
+    "dotenv": "^16.6.1",
+    "typescript": "^6.0.3"
+  }
+}
